@@ -149,7 +149,7 @@ const scrollToTop = () => {
     height: 50%;
     display: flex;
     align-items: center; /* Center vertically */
-    background-color: #1ba098;
+    background-color: var(--navigation-text-color);
   }
   @media only screen and (max-width: 400px) {
     .center-container {
@@ -164,7 +164,7 @@ const scrollToTop = () => {
 
     .left-container-link {
       font-size: 14px;
-      color: white;
+      color: var(--text-color);
     }
     .right-container {
       display: flex;
