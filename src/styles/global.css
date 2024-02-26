@@ -1,0 +1,15 @@
+.dark-theme {
+  --background-color: #380d34; /* Dark theme background color */
+  --text-color: #8f8d8d; /* Dark theme text color */
+  --dark-mode-container: #8f8d8d;
+  --navigation-text-color: #8f8d8d;
+  --border-color: #380d34;
+}
+
+.light-theme {
+  --background-color: #deb992; /* Dark theme background color */
+  --text-color: #ffffff; /* Dark theme text color */
+  --dark-mode-container: #deb992;
+  --navigation-text-color: #1ba098;
+  --border-color: #380d34;
+}
