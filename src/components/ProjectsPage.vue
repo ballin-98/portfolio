@@ -4,7 +4,7 @@
     :class="darkMode ? 'dark-theme' : 'light-theme'"
     id="project-page"
   >
-    <div class="project-tag-container">
+    <div class="project-tag-container" v-if="!isMobile">
       <Tag
         v-for="tag in computedTagsToDisplay"
         :key="tag.title"
@@ -13,7 +13,16 @@
         @click="handleTagVisibility(tag.title)"
       ></Tag>
     </div>
-    <div class="projects-container">
+    <div class="mobile-project-container" v-if="isMobile">
+      <ProjectCard
+        v-for="project in projectList"
+        :key="project.title"
+        :title="project.title"
+        :description="project.description"
+        :image="project.image"
+      ></ProjectCard>
+    </div>
+    <div class="projects-container" v-else>
       <div class="arrow-button" @click="getPreviousCards" :class="{ hidden: !canScroll }">
         <img src="/assets/chevron_left.svg" alt="" />
       </div>
@@ -42,6 +51,9 @@ import Tag from '@/components/Tag.vue'
 import { allTags } from '@/data/tagData'
 import { CircularArray } from '@/helpers/dataStructures'
 import { darkMode } from '@/composables/isDarkMode'
+import { screenSizeHelper } from '@/composables/isMobile'
+
+const { isMobile } = screenSizeHelper()
 
 // refs
 const tagsToDisplay: Ref<TagDto[]> = ref(allTags)
@@ -174,6 +186,7 @@ const checkForOverlap = (tags: TagDto[]) => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* border: 4px solid black; */
 }
 
 .project-tag-container {
@@ -234,6 +247,16 @@ const checkForOverlap = (tags: TagDto[]) => {
 .hidden {
   pointer-events: none;
   opacity: 0.2;
+}
+
+.mobile-project-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
 }
 
 @media only screen and (max-width: 800px) {
