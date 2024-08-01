@@ -257,6 +257,7 @@ const checkForOverlap = (tags: TagDto[]) => {
   justify-content: center;
   align-items: center;
   overflow: scroll;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -275,6 +276,14 @@ const checkForOverlap = (tags: TagDto[]) => {
 
   .arrow-button {
     transform: rotate(90deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects-page-container {
+    height: inherit;
+    padding: 0;
+    margin: 0;
   }
 }
 </style>

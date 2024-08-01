@@ -11,21 +11,21 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 const props = defineProps({
   title: {
     type: String,
-    default: "Project",
+    default: 'Project'
   },
   description: {
     type: String,
-    default: "A very detailed description",
+    default: 'A very detailed description'
   },
   image: {
     type: String,
-    default: "/assets/project-image.jpg",
-  },
-});
+    default: '/assets/project-image.jpg'
+  }
+})
 </script>
 
 <style scoped>
@@ -37,7 +37,7 @@ const props = defineProps({
   overflow: hidden; /* Ensure the overlay doesn't spill out */
   transition: transform 0.1s;
   padding: 0px 30px;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .card-container:hover {
@@ -79,7 +79,7 @@ const props = defineProps({
   height: 100%;
   margin: 20px 0px;
   font-size: 24px;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 .card-description {
   width: 100%;
@@ -93,6 +93,32 @@ const props = defineProps({
     width: 90%;
     position: relative;
     border-radius: 20%;
+    overflow: hidden; /* Ensure the overlay doesn't spill out */
+    transition: transform 0.1s;
+    padding: 10px 0px;
+  }
+
+  .card-title {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .card-description {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-container {
+    height: 300px;
+    width: 90%;
+    position: relative;
+    border-radius: 10px;
     overflow: hidden; /* Ensure the overlay doesn't spill out */
     transition: transform 0.1s;
     padding: 10px 0px;
