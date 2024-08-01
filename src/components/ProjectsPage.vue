@@ -253,7 +253,6 @@ const checkForOverlap = (tags: TagDto[]) => {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
   justify-content: center;
   align-items: center;
   overflow: scroll;

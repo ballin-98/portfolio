@@ -143,8 +143,6 @@ const description = `I'm a Computer Science graduate from the University of Albe
     width: calc(100% - 40px); /* Corrected syntax */
     font-size: 32px;
     padding: 5px;
-    /* border: 2px solid white;
-    border-radius: 5px; */
     height: 50px;
   }
 
