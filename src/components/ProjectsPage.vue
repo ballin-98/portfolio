@@ -281,8 +281,6 @@ const checkForOverlap = (tags: TagDto[]) => {
 @media only screen and (max-width: 500px) {
   .projects-page-container {
     height: inherit;
-    padding: 0;
-    margin: 0;
   }
 }
 </style>

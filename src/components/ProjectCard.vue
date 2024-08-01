@@ -137,5 +137,9 @@ const props = defineProps({
     margin: 10px 0px;
     font-size: 14px;
   }
+
+  .card-container:hover {
+    transform: scale(1.05); /* Scale up by 5% on click */
+  }
 }
 </style>
