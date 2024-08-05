@@ -2,7 +2,6 @@ import { screenSizeHelper } from '@/composables/isMobile'
 
 const scrollToTag = (tagName: string): void => {
   const elementToScrollTo = document.querySelector(tagName)
-
   if (elementToScrollTo) {
     elementToScrollTo.scrollIntoView({ behavior: 'smooth' })
   } else {
@@ -12,9 +11,9 @@ const scrollToTag = (tagName: string): void => {
 
 export const scrollToProjects = () => {
   const { isMobile } = screenSizeHelper()
-  if (isMobile) {
+  if (isMobile.value) {
     scrollToTag('#projects-mobile')
   } else {
-    scrollToTag('#projects')
+    scrollToTag('#project-page')
   }
 }
