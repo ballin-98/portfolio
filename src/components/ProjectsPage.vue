@@ -14,6 +14,10 @@
       ></Tag>
     </div>
     <div class="mobile-project-container" v-if="isMobile">
+      <div class="title-container">
+        <div class="projects-title" id="projects-mobile">Projects</div>
+        <div class="help-instructions">Tap an image to view more details</div>
+      </div>
       <ProjectCard
         v-for="project in projectList"
         :key="project.title"
@@ -257,6 +261,29 @@ const checkForOverlap = (tags: TagDto[]) => {
   align-items: center;
   overflow: scroll;
   gap: 10px;
+}
+
+.title-container {
+  display: flex;
+  align-items: flex-start;
+  width: calc(100% - 30px);
+  flex-direction: column;
+}
+
+.projects-title {
+  font-size: 32px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-align: left;
+  padding: 20px 5px 5px 5px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.help-instructions {
+  padding-left: 5px;
+  color: var(--navigation-text-color);
+  font-weight: bold;
+  font-style: italic;
 }
 
 @media only screen and (max-width: 800px) {

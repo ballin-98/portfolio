@@ -4,7 +4,7 @@
       <a @click="scrollToTop">
         <div class="left-container-link">ABOUT</div>
       </a>
-      <a href="#project-page">
+      <a @click="scrollToProjects">
         <div class="left-container-link">PROJECTS</div>
       </a>
     </div>
@@ -32,6 +32,7 @@
 </template>
 
 <script setup lang="ts">
+import { scrollToProjects } from '@/composables/scroll'
 import { darkMode } from '@/composables/isDarkMode'
 const scrollToTop = () => {
   window.scrollTo({
@@ -48,6 +49,9 @@ const scrollToTop = () => {
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Roboto Mono', monospace;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .left-container {
