@@ -11,14 +11,14 @@
 </template>
 
 <script setup lang="ts">
-import ProjectsPage from "@/components/ProjectsPage.vue";
-import AboutPage from "@/components/AboutPage.vue";
-import NavigationBar from "@/components/NavigationBar.vue";
+import ProjectsPage from '@/components/ProjectsPage.vue'
+import AboutPage from '@/components/AboutPage.vue'
+import NavigationBar from '@/components/NavigationBar.vue'
 </script>
 
 <style>
 .page-container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
