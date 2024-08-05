@@ -27,21 +27,24 @@
       ></ProjectCard>
     </div>
     <div class="projects-container" v-else>
-      <div class="arrow-button" @click="getPreviousCards" :class="{ hidden: !canScroll }">
-        <img src="/assets/chevron_left.svg" alt="" />
+      <div class="active-projects" v-if="cardsAreVisible">
+        <div class="arrow-button" @click="getPreviousCards" :class="{ hidden: !canScroll }">
+          <img src="/assets/chevron_left.svg" alt="" />
+        </div>
+        <transition name="fade" mode="out-in"></transition>
+        <ProjectCard
+          v-for="project in visibleCards"
+          :key="project.title"
+          :title="project.title"
+          :description="project.description"
+          :image="project.image"
+        ></ProjectCard>
+        <transition />
+        <div class="arrow-button" @click="getNextCards" :class="{ hidden: !canScroll }">
+          <img src="/assets/chevron_right.svg" alt="" />
+        </div>
       </div>
-      <transition name="fade" mode="out-in"></transition>
-      <ProjectCard
-        v-for="project in visibleCards"
-        :key="project.title"
-        :title="project.title"
-        :description="project.description"
-        :image="project.image"
-      ></ProjectCard>
-      <transition />
-      <div class="arrow-button" @click="getNextCards" :class="{ hidden: !canScroll }">
-        <img src="/assets/chevron_right.svg" alt="" />
-      </div>
+      <div v-else class="projects-fallback">Click on a tag to view some projects</div>
     </div>
   </div>
 </template>
@@ -65,6 +68,8 @@ const computedTagsToDisplay = computed(() => tagsToDisplay.value)
 
 // we start with this
 const visibleCards: Ref<projectCardData[]> = ref(projectList.slice(0, 3))
+
+const cardsAreVisible = computed(() => visibleCards.value.length !== 0)
 
 const circularArrayProjects = new CircularArray<projectCardData>(projectList.length)
 
@@ -239,6 +244,15 @@ const checkForOverlap = (tags: TagDto[]) => {
   /* gap: 20px; */
 }
 
+.active-projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -292,6 +306,15 @@ const checkForOverlap = (tags: TagDto[]) => {
   }
 
   .projects-container {
+    height: 80vh;
+    width: (100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active-projects {
     height: 80vh;
     width: (100%);
     display: flex;
