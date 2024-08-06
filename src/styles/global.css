@@ -4,6 +4,7 @@
   --dark-mode-container: #8f8d8d;
   --navigation-text-color: #8f8d8d;
   --border-color: #380d34;
+  --visible-text: #8f8d8d;
 }
 
 .light-theme {
@@ -12,4 +13,5 @@
   --dark-mode-container: #deb992;
   --navigation-text-color: #1ba098;
   --border-color: #380d34;
+  --visible-text: #051622;
 }

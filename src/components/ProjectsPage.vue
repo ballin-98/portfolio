@@ -44,13 +44,12 @@
           <img src="/assets/chevron_right.svg" alt="" />
         </div>
       </div>
-      <div v-else class="projects-fallback">Click on a tag to view some projects</div>
+      <div v-else class="projects-fallback">Select a tag to explore my projects</div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// imports
 import ProjectCard from '@/components/ProjectCard.vue'
 import { projectList, type projectCardData, type TagDto } from '@/data/projectData'
 import { type Ref, computed, ref } from 'vue'
@@ -195,7 +194,6 @@ const checkForOverlap = (tags: TagDto[]) => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* border: 4px solid black; */
 }
 
 .project-tag-container {
@@ -205,7 +203,6 @@ const checkForOverlap = (tags: TagDto[]) => {
   justify-content: flex-start; /* Align content to the end (right side) */
   align-items: center;
   flex-wrap: wrap;
-  /* border: 2px solid red; */
 }
 
 .arrow-button {
@@ -239,9 +236,7 @@ const checkForOverlap = (tags: TagDto[]) => {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* border: 2px solid purple; */
   margin: 20px;
-  /* gap: 20px; */
 }
 
 .active-projects {
@@ -251,6 +246,13 @@ const checkForOverlap = (tags: TagDto[]) => {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.projects-fallback {
+  font-size: 24px;
+  color: var(--navigation-text-color);
+  font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .fade-enter-active,
@@ -295,12 +297,12 @@ const checkForOverlap = (tags: TagDto[]) => {
 
 .help-instructions {
   padding-left: 5px;
-  color: var(--navigation-text-color);
+  color: var(--visible-text);
   font-weight: bold;
   font-style: italic;
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 1200px) {
   .project-tag-container {
     display: none;
   }
@@ -326,11 +328,47 @@ const checkForOverlap = (tags: TagDto[]) => {
   .arrow-button {
     transform: rotate(90deg);
   }
+} */
+
+@media only screen and (max-width: 1000px) {
+  .projects-page-container {
+    height: inherit;
+  }
+
+  .projects-title {
+    font-size: 48px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 20px 5px 5px 30px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .help-instructions {
+    padding-left: 30px;
+    color: var(--visible-text);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-  .projects-page-container {
-    height: inherit;
+  .projects-title {
+    font-size: 32px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 20px 5px 5px 10px;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .help-instructions {
+    padding-left: 10px;
+    color: var(--visible-text);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
   }
 }
 </style>
