@@ -10,8 +10,7 @@ export const screenSizeHelper = () => {
   window.addEventListener('resize', handleResize)
 
   const isMobile = computed(() => {
-    console.log('resizing: ', 500 > screenWidth.value)
-    return 500 > screenWidth.value
+    return 1000 > screenWidth.value
   })
 
   return { isMobile }

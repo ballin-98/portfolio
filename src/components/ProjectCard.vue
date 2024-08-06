@@ -46,6 +46,7 @@ const props = defineProps({
 
 .card-image-container {
   height: 100%;
+  max-height: 400px;
   display: block;
   position: relative;
 }
@@ -87,12 +88,12 @@ const props = defineProps({
   margin: 20px 0px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .card-container {
-    height: 90%;
+    height: 30vh;
     width: 90%;
     position: relative;
-    border-radius: 20%;
+    border-radius: 5px;
     overflow: hidden; /* Ensure the overlay doesn't spill out */
     transition: transform 0.1s;
     padding: 10px 0px;

@@ -114,7 +114,7 @@ const description = `I'm a Computer Science graduate from the University of Albe
   font-weight: 1000;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
   }
@@ -141,7 +141,7 @@ const description = `I'm a Computer Science graduate from the University of Albe
     align-items: center; /* Center the content vertically */
     color: var(--text-color); /* White text color */
     width: calc(100% - 40px); /* Corrected syntax */
-    font-size: 32px;
+    font-size: 48px;
     padding: 5px;
     height: 50px;
   }
@@ -156,8 +156,24 @@ const description = `I'm a Computer Science graduate from the University of Albe
     color: #1d8881; /* White text color */
     width: calc(100% - 40px);
     padding: 5px; /* Add padding for better visual appearance */
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 1000;
+  }
+
+  @media screen and (max-width: 700px) {
+    .description {
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      border: 2px solid #1c978f;
+      border-radius: 5px;
+      background-color: var(--background-color); /* Red background color */
+      color: #1d8881; /* White text color */
+      width: calc(100% - 40px);
+      padding: 5px; /* Add padding for better visual appearance */
+      font-size: 18px;
+      font-weight: 1000;
+    }
   }
 }
 </style>
