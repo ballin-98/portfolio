@@ -136,6 +136,7 @@ const description = `I'm a Computer Science graduate from the University of Albe
     width: 70px;
     margin: 5px 10px;
   }
+
   .header {
     display: flex;
     align-items: center; /* Center the content vertically */
@@ -156,7 +157,7 @@ const description = `I'm a Computer Science graduate from the University of Albe
     color: #1d8881; /* White text color */
     width: calc(100% - 40px);
     padding: 5px; /* Add padding for better visual appearance */
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 1000;
   }
 
@@ -171,8 +172,18 @@ const description = `I'm a Computer Science graduate from the University of Albe
       color: #1d8881; /* White text color */
       width: calc(100% - 40px);
       padding: 5px; /* Add padding for better visual appearance */
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 1000;
+    }
+
+    .header {
+      display: flex;
+      align-items: center; /* Center the content vertically */
+      color: var(--text-color); /* White text color */
+      width: calc(100% - 40px); /* Corrected syntax */
+      font-size: 40px;
+      padding: 5px;
+      height: 50px;
     }
   }
 }
