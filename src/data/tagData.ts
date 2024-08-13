@@ -17,7 +17,6 @@ export const allTags: TagDto[] = [
   { title: 'HTML', showTag: true },
   { title: 'Python', showTag: true },
   { title: 'Selenium', showTag: true },
-  { title: 'C', showTag: true },
   { title: 'Critical Thinking', showTag: true },
   { title: 'Stress Testing', showTag: true },
   { title: 'API', showTag: true },
@@ -27,5 +26,7 @@ export const allTags: TagDto[] = [
   { title: 'Locust', showTag: true },
   { title: 'Django', showTag: true },
   { title: 'FME', showTag: true },
-  { title: 'Tableau', showTag: true }
+  { title: 'Tableau', showTag: true },
+  { title: 'Docker', showTag: true },
+  { title: 'RISC-V', showTag: true }
 ]
