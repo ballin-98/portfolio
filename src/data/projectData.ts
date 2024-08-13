@@ -104,5 +104,18 @@ export const projectList: projectCardData[] = [
       { title: 'Tableau', showTag: true }
     ],
     index: 5
+  },
+  {
+    title: 'Property Scroller',
+    description:
+      'A project built with Python and Selenium that gathers housing data from different sources and stores it',
+    image: '/portfolio/assets/etl.jpg',
+    tags: [
+      { title: 'Selenium', showTag: true },
+      { title: 'Python', showTag: true },
+      { title: 'SQL', showTag: true },
+      { title: 'Tableau', showTag: true }
+    ],
+    index: 5
   }
 ]
