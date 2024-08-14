@@ -15,7 +15,8 @@ export type TagDto = {
 export const projectList: projectCardData[] = [
   {
     title: 'LawDepot eSign',
-    description: 'An electronic signature web application built using Vue3 and .NET 6',
+    description:
+      'An electronic signature web application, built with Vue 3 and .NET Core, enabling users to seamlessly share and collaborate on documents.',
     image: '/portfolio/assets/eSign.png',
     tags: [
       { title: 'Vue 3', showTag: true },
@@ -36,7 +37,7 @@ export const projectList: projectCardData[] = [
   {
     title: 'LawDepot Advanced Editor',
     description:
-      'A document editing application that allows users to edit and share their legal documents. Also allows users to import / export word documents and pdfs',
+      'A document editing application, built with Vue 3 and .NET Core, that empowers users to edit, share, and collaborate on legal documents. The application also supports importing Word documents and PDFs converting them to an editable format',
     image: '/portfolio/assets/ae.png',
     tags: [
       { title: 'Vue 3', showTag: true },
@@ -57,7 +58,7 @@ export const projectList: projectCardData[] = [
   {
     title: 'Stress Testing Application',
     description:
-      'Built using Python and the Locust framework this application stress tests endpoints and provides insights to any vulnerabilities',
+      'Developed with Python and the Locust framework, this application performs stress testing on endpoints, offering valuable insights into potential vulnerabilities.',
     image: '/portfolio/assets/stress_testing.jpg',
     tags: [
       { title: 'Python', showTag: true },
@@ -69,7 +70,7 @@ export const projectList: projectCardData[] = [
   {
     title: 'Dividend Calculator',
     description:
-      'A web application built using Vue3 dedicated to figuring out returns on money invested for dividend focused investors',
+      'A light weight web application built with Vue 3, designed to calculate and analyze returns on investments for dividend-focused investors.',
     image: '/portfolio/assets/dividend_calculator.jpg',
     tags: [
       { title: '.Net 6', showTag: true },
@@ -95,7 +96,7 @@ export const projectList: projectCardData[] = [
   {
     title: 'ETL - City of Edmonton',
     description:
-      'An automated workflow built using FME that extracts, transforms and aggregates data from over 10 different sources',
+      'An automated workflow developed with FME that extracts, transforms, and aggregates data from more than 10 diverse sources, which is then used in data visualizations to provide actionable insights',
     image: '/portfolio/assets/etl.jpg',
     tags: [
       { title: 'FME', showTag: true },
@@ -109,7 +110,7 @@ export const projectList: projectCardData[] = [
     title: 'Property Scroller',
     description:
       'A project built with Python and Selenium that gathers housing data from different sources and stores it',
-    image: '/portfolio/assets/etl.jpg',
+    image: '/portfolio/assets/house.jpg',
     tags: [
       { title: 'Selenium', showTag: true },
       { title: 'Python', showTag: true },
