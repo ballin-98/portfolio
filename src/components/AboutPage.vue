@@ -20,7 +20,10 @@
 
 <script setup lang="ts">
 import { darkMode, toggleDarkMode } from '@/composables/isDarkMode'
-const description = `I'm a Computer Science graduate from the University of Alberta with over four years of professional experience in web development. Based in Edmonton, Canada, I specialize in crafting sophisticated solutions and optimizing applications. My expertise lies in futuristic web development and design, focusing on next-level websites and web applications. I bring a proven track record of creative problem-solving and a dedication to user-centric solutions. I look forward to contributing my skills and experience to elevate your projects.`
+const description = `Hi, I'm Alex, a passionate problem-solver with a knack for optimizing processes and simplifying complex challenges. 
+                      As a software developer with over 4 years of professional experience, 
+                      I thrive on breaking down large-scale problems into manageable solutions, driving efficiency and innovation in everything I do.
+                      When I'm not staring at my laptop I'm usually in the gym, on a hike, or doing something fun outdoors`
 </script>
 
 <style scoped>
