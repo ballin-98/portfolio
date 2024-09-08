@@ -23,7 +23,7 @@ import { darkMode, toggleDarkMode } from '@/composables/isDarkMode'
 const description = `Hi, I'm Alex, a passionate problem-solver with a knack for optimizing processes and simplifying complex challenges. 
                       As a software developer with over 4 years of professional experience, 
                       I thrive on breaking down large-scale problems into manageable solutions, driving efficiency and innovation in everything I do.
-                      When I'm not staring at my laptop I'm usually in the gym, on a hike, or doing something fun outdoors`
+                      When I'm not staring at my laptop I'm usually in the gym, on a hike, or doing something fun outdoors!`
 </script>
 
 <style scoped>
